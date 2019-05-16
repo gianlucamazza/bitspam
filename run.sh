@@ -1,6 +1,5 @@
 #!/bin/sh
 SPAM_AMOUNT=0.00001
-SPENT=0
 while true
 do
 	# if balance > spam_amount
