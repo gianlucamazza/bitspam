@@ -10,7 +10,7 @@ do
 		then
 			# ask bitcoind for new address
 			NEWADDR=`curl -s --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://test:test@127.0.0.1:18888/ | jq -c .result`
-        	echo "sending transaction to $NEWADDR"
+        		echo "sending transaction to $NEWADDR"
 			
 			# clean response
 			NEWADDR=$( echo $NEWADDR | sed 's/[^a-z A-Z 0-9]//g' )
